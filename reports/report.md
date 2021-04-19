@@ -3,7 +3,7 @@ TechLabs Group 10
 # Determining win percentage from draft phase in a professional League of Legends game
 *"So many noobs, will matchmaking ever find balance?"* - Akali
 
-[TOC]
+1. [Introduction](## Introduction)
 
 ## Introduction
 
