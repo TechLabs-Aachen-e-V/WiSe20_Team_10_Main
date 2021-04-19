@@ -1,4 +1,4 @@
-Determining win percentage from draft phase in a professional League of Legends game
+Predicting Winner from Draft Phase for High ELO League of Legends games
 ==============================
 
 TechLabs group 10 WiSe20/21
