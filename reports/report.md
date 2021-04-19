@@ -336,7 +336,7 @@ After putting solo queue game data through various levels of our machine learnin
 
 Our analysis also reveals that predicting the winning draft with enough time and resources should be a solvable problem and could become a huge factor in the eSports arena. 
 
-In the next section we mention some of the possible pathways we can choose in our pursuit of making these predictions close to certainty.
+In the "Outlooks" section we mention some of the possible pathways we can choose in our pursuit of making these predictions close to certainty.
 
 ---
 ### Potential in application / Usefulness
