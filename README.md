@@ -1,9 +1,11 @@
-<project_name>
+Determining win percentage from draft phase in a professional League of Legends game
 ==============================
 
-<A short description of your project.>
+TechLabs group 10 WiSe20/21
 
-Project Organization
+The report can be found [here](https://github.com/TechLabs-Aachen-e-V/WiSe20_Team_10_Main/blob/master/reports/report.md).
+
+Project Organization - adapted
 ------------
 
     ├── LICENSE
@@ -14,32 +16,14 @@ Project Organization
     │   ├── processed      <- The final, canonical data sets for modeling.
     │   └── raw            <- The original, immutable data dump.
     │
-    ├── docs               <- Documentation about your project (PDF, Word files, images etc.)
-    │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
     │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │                     predictions
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
     └
 
 --------
