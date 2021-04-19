@@ -5,14 +5,14 @@ TechLabs Group 10
 
 1. [Introduction](#Introduction)
 2. [Methods and Results](#Methods-and-Results)
-    * [Level 1: Considering Champion Names](#Level-1:-Initial-Prediction-with-ML:-Considering-Champion-Names)
+    * [Level 1: Considering Champion Names](#Level-1-Initial-Prediction-with-ML-Considering-Champion-Names)
     * [Detailed Analysis of Data](#Detailed-Analysis-of-Data)
 
-    * [Level 2: Considering Win rates](#Level-2:-Second-Round-of-Prediction-using-ML:-Considering-Win-rates)
-    * [Level 3: Considering Champion Stats](#Level-3:-Third-Round-of-Prediction-with-ML/AI:-Considering-Champion-Stats)
+    * [Level 2: Considering Win rates](#Level-2-Second-Round-of-Prediction-using-ML-Considering-Win-rates)
+    * [Level 3: Considering Champion Stats](#Level-3-Third-Round-of-Prediction-with-ML/AI-Considering-Champion-Stats)
 
     * [Analysis of Most Played Champions and Champion Synergies](#Analysis-of-Most-Played-Champions-and-Champion-Synergies)
-    * [Level 4: Considering Synergy Scores](#Level-4:-Fourth-Round-of-Prediction-with-ML/AI:-Considering-Synergy-Scores)
+    * [Level 4: Considering Synergy Scores](#Level-4-Fourth-Round-of-Prediction-with-ML/AI-Considering-Synergy-Scores)
 3. [Conclusion](#Conclusion)
 4. [Outlook](#Outlook)
 
