@@ -4,6 +4,17 @@ TechLabs Group 10
 *"So many noobs, will matchmaking ever find balance?"* - Akali
 
 1. [Introduction](#Introduction)
+2. [Methods and Results](#Methods and Results)
+    * [Level 1: Considering Champion Names](#Level 1: Initial Prediction with ML: Considering Champion Names)
+    * [Detailed Analysis of Data](#Detailed Analysis of Data)
+
+    * [Level 2: Considering Win rates](#Level 2: Second Round of Prediction using ML: Considering Win rates)
+    * [Level 3: Considering Champion Stats](#Level 3: Third Round of Prediction with ML/AI: Considering Champion Stats)
+
+    * [Analysis of Most Played Champions and Champion Synergies](#Analysis of Most Played Champions and Champion Synergies)
+    * [Level 4: Considering Synergy Scores](#Level 4: Fourth Round of Prediction with ML/AI: Considering Synergy Scores)
+3. [Conclusion](#Conclusion)
+4. [Outlook](#Outlook)
 
 ## Introduction
 
@@ -29,9 +40,9 @@ The game consists of 2 teams, red and blue, with 5 players each. In general ther
 
 The gameplay is very dynamic and can get quite complex with different positional constellations, champion abilities and items. Needless to say that the potential is limitless. The goal of the game is to be the first to destroy the enemy's base called the Nexus. Along the way the player's champions will fight each other.
 
-Each game starts with a draft phase in which both competing teams select and ban five champions each in a specific order (*as depicted in the image below*). The banned champions cannot be picked for the entire duration of the game. As of this analysis, 153 champions have been released with each champion having its own individual strengths and weaknesses. Choosing five champions wisely from this vast pool in the draft phase is one of the most crucial steps towards victory. Due to the selection order, the blue team always has the advantage to pick the first champion. Only after that can the red team select their first champion, with their advantage being the final counterpick. Consequently the blue team will drive the draft phase as the red team has to prioritize on counterpicking. 
-
 ![](figures/draft_phase.jpg)
+
+Each game starts with a draft phase in which both competing teams select and ban five champions each in a specific order (*as depicted in the image below*). The banned champions cannot be picked for the entire duration of the game. As of this analysis, 153 champions have been released with each champion having its own individual strengths and weaknesses. Choosing five champions wisely from this vast pool in the draft phase is one of the most crucial steps towards victory. Due to the selection order, the blue team always has the advantage to pick the first champion. Only after that can the red team select their first champion, with their advantage being the final counterpick. Consequently the blue team will drive the draft phase as the red team has to prioritize on counterpicking. 
 
 The draft phase holds the potential of skewing the odds of a game before the actual match has even started. Therefore, our aim is to analyse how well we can predict the outcome of a game solely based on picking certain champion combinations. 
 
@@ -96,12 +107,7 @@ Once the data had been verified for its accuracy and represented in a cleaner ma
 * Champion data was collected in a separate dataframe with their corresponding attributes. Please note that some champions had more than one role in which they were played. To simplify analysis and to process data in an efficient manner, only the two most-played roles for each champion were considered. 
 ![](figures/champ_stats_nb.png)
 
-
 ---
-
-
-
-
 
 ### Level 1: Initial Prediction with ML: Considering Champion Names
 
@@ -127,7 +133,7 @@ Support Vector Machines were also used to check whether our data could be separa
 | 51%     | 52%     | 51%    |
 
 
-**Conclusions**: 
+**Insights**: 
 
 Our simplest model yields an F1 score close to random chance suggesting that more parameters need to be considered.
 
@@ -170,7 +176,7 @@ K-Nearest Neighbors and Logistic Regression were chosen considering now that our
 
 
 
-**Conclusions**: 
+**Insights**: 
 
 On average we see a 5% increase in our prediction rates when the champion win rates were considered. Why does this happen? It can be deduced that the increase in prediction rate is due to the fact that instead of just considering the raw win rate of a champion on a particular side, their predominant role win rates were also considered when replacing the champion names with their corresponding win rates
 
@@ -230,14 +236,14 @@ A large number of different sets of hidden layer quantities were tried out acros
 | 51% |
 
 
-**Conclusions**: 
+**Insights**: 
 
 It seems that unfortunately adding more parameters did not improve our prediction percentage. It also draws our attention to the inherent variability of performances in-game which can be chaotic (solo queue games),  and cannot possibly be gleaned from just the draft phase. Also with more parameters being used, we generally observed overfitting, which can only be solved by requiring a larger database than the current one. 
 
 ---
 
 
-### Analysis on the Impact of Most Played Champions Overall and in Each Role, along with Champion Synergies
+### Analysis of Most Played Champions and Champion Synergies
 
 #### Impact of Most Played Champions Overall
 
@@ -309,13 +315,13 @@ In the ML models so far we have considered all the parameters which describe one
 | 56% |     54%     |  62%     |    61% |
 
 
-**Conclusions**: 
+**Insights**: 
 
 SVMs and Random Forests seem to work well with this model and we are able to extract another 5% increase in our prediction percentage while using significantly less data than in level 3.
 
 
 
-## Conclusions and Outlook
+## Conclusion
 
 ### Inference
 From our analysis we were able to deduce the following:
@@ -326,7 +332,6 @@ From our analysis we were able to deduce the following:
 
 ### Achievements
 
-
 After putting solo queue game data through various levels of our machine learning models, we were able to improve our model from random chance to 62% prediction accuracy. The importance of this increase in prediction accuracy can be put into perspective by the fact that no player proficiency on the champions they played, were considered. Also solo queue games are known for their chaotic swings in-game mainly attributed to uncoordinated strategies between teammates while actual tournaments are much more structured and less susceptible to chance. 
 
 Our analysis also reveals that predicting the winning draft with enough time and resources should be a solvable problem and could become a huge factor in the eSports arena. 
@@ -334,9 +339,15 @@ Our analysis also reveals that predicting the winning draft with enough time and
 In the next section we mention some of the possible pathways we can choose in our pursuit of making these predictions close to certainty.
 
 ---
+### Potential in application / Usefulness
 
+ The Draft Phase has a huge importance in the League of Legends Esports Arena and given the masive number of audience who tune in to tournament games,one possibility would be is to create a frontend that displays the predictions by inputing in the champions played on both the teams. 
 
-### Further research and possibilities
+Furthermore, the App could be potentially useful to both pro-players and normal gamers alike by offering an insight into win-percent scenarios before and after the game. It could also help in analysing the Player Skill vs Draft gap between two teams for that particular game.
+
+---
+
+## Outlook
 So far in this project, we had just considered only champion data as our cornerstone and have discarded any other information to make our model  applicable at all levels.
 
 The fact however remains that some individuals are more proficient with some champions while others might find the same champions undesirable.
@@ -345,7 +356,7 @@ Adding to that fact is that we had analysed only solo queue data which is mostly
 
 Below are the following useful information which can add more specificity and potentially better accuracy to our prediction model as such.
 
-#### Give more substantial information with respect to champions
+### Give more substantial information with respect to champions
 
 Some of the aspects which come to mind are:
 * Classify champions as Early game, Mid game or Late game champions. 
@@ -364,7 +375,7 @@ Some of the aspects which come to mind are:
     * **Possible Method of Action**: Once game data from previous patches are imported, take the champion parameters (which we encountered in Level 3) from DataDragon for that particular patch and train our model. With enough game data from multiple different patches, this time around we can prevent overfitting by having more games and the champion stats as such will have some variance which can help in correctly assessing the champion strength for that particular patch.
 * Global presence score (ultimates like Nocturne, TF, Pantheon,Galio) - Just as an extra possibilty.
 
-#### Get more specific about application of the model
+### Get more specific about application of the model
 
 The goal of our model is to be applied in actual tournaments. As a result working on tournament data would be more beneficial than on solo queue data (as we have done here) mainly because comparing to solo queue games, tournaments or 5 v 5s are:
 1. More structured
@@ -383,21 +394,11 @@ The above three factors are crucial in accurately predicting the draft phase win
 
 ---
 
-
-### Potential in application / Usefulness
-
-
- The Draft Phase has a huge importance in the League of Legends Esports Arena and given the masive number of audience who tune in to tournament games,one possibility would be is to create a frontend that displays the predictions by inputing in the champions played on both the teams. 
-
-Furthermore, the App could be potentially useful to both pro-players and normal gamers alike by offering an insight into win-percent scenarios before and after the game. It could also help in analysing the Player Skill vs Draft gap between two teams for that particular game.
-
----
 ### Acknowledgements
 
 Our team mainly consists of beginners in machine learning and data science. The project gave us a playful opportunity to apply the skills that we learned through our courses. With the guidance of our mentor we were able to analyse and build up models on our data over the last three months. Overall, it was a fun topic to work on!
 
 ---
-
 
 **Code Base:** [Github repository](https://github.com/TechLabs-Aachen-e-V/WiSe20_Team_10_Main)
 
