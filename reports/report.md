@@ -5,7 +5,7 @@ TechLabs Group 10
 
 1. [Introduction](#Introduction)
 2. [Methods and Results](#Methods and Results)
-    * [Level 1: Considering Champion Names](#Level 1: Initial Prediction with ML: Considering Champion Names)
+    * [Level 1: Considering Champion Names](#Level1)
     * [Detailed Analysis of Data](#Detailed Analysis of Data)
 
     * [Level 2: Considering Win rates](#Level 2: Second Round of Prediction using ML: Considering Win rates)
