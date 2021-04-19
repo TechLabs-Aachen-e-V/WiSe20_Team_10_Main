@@ -1,6 +1,6 @@
 TechLabs Group 10
 
-# Determining win percentage from draft phase in a professional League of Legends game
+# Determining the Winner of Draft Phase in a Professional League of Legends Game
 *"So many noobs, will matchmaking ever find balance?"* - Akali
 
 1. [Introduction](#Introduction)
