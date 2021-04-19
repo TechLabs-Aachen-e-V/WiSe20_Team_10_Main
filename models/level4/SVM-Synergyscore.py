@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 # %matplotlib inline
 
-df = pd.read_csv('../../Level 3/GettingChampionTags&Stats/LOLOracleData_ChampStats.csv')
+df = pd.read_csv('../../data/processed/LOLOracleData_ChampStats.csv')
 
 df.head()
 
@@ -41,7 +41,7 @@ df.drop(columns,axis=1,inplace=True)
 
 df
 
-df2 = pd.read_csv('../GettingSynergyscores/LOLOracleDatawithSynscores.csv')
+df2 = pd.read_csv('../../data/processed/LOLOracleDatawithSynscores.csv')
 
 df2.head()
 

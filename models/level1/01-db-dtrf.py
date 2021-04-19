@@ -7,7 +7,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.8.0
+#       jupytext_version: 1.11.1
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 # %matplotlib inline
 
-df = pd.read_csv('../../data/processedLOLOracleData.csv')
+df = pd.read_csv('../../data/processed/LOLOracleData.csv')
 
 df.head()
 

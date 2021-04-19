@@ -7,7 +7,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.8.0
+#       jupytext_version: 1.11.1
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -26,7 +26,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 # %matplotlib inline
 
-df = pd.read_csv('../Data/ChampionStats.csv')
+df = pd.read_csv('../data/processed/ChampionStats.csv')
 
 df.head()
 
@@ -71,13 +71,9 @@ popchamp = df[(df['Totalwinrate']>0.49) & (df['#Role1']>1000)]
 popchamp = popchamp.copy()
 
 
-# +
 fig, ax = plt.subplots()
 ax.set(ylim=(0.48,0.52))
 sns.barplot(x='Role1',y='Totalwinrate',data=popchamp)
-
-
-# -
 
 # #### From the above graph we can see that popular champions in jungle and mid roles made more impact on the game¶
 
