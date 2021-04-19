@@ -3,6 +3,8 @@ TechLabs Group 10
 # Predicting Winner from Draft Phase for High ELO League of Legends games
 *"So many noobs, will matchmaking ever find balance?"* - Akali
 
+![](league-of-legends-picks-bans.jpeg)
+
 1. [Introduction](#Introduction)
 2. [Methods and Results](#Methods-and-Results)
     * [Level 1: Considering Champion Names](#Level-1-Initial-Prediction-with-ML-Considering-Champion-Names)
