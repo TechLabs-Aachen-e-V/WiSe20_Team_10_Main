@@ -105,6 +105,7 @@ Once the data had been verified for its accuracy and represented in a cleaner ma
 * The database contains all the 153 champions (at the time of analysis) in the game.
 ![](figures/no_champions_nb.png)
 * Champion data was collected in a separate dataframe with their corresponding attributes. Please note that some champions had more than one role in which they were played. To simplify analysis and to process data in an efficient manner, only the two most-played roles for each champion were considered. 
+
 ![](figures/champ_stats_nb.png)
 
 ---
