@@ -1,6 +1,6 @@
 TechLabs Group 10
 
-# Predicting Draft Phase Winner for High ELO League of Legends games
+# Predicting Winner from Draft Phase for High ELO League of Legends games
 *"So many noobs, will matchmaking ever find balance?"* - Akali
 
 1. [Introduction](#Introduction)
